@@ -8,11 +8,12 @@ The dataset provided in the `data` folder was extracted from SongKick and has a 
 
 ## Step 1
 
-The first step of the exercise is to develop a single API Endpoint that returns the concerts matching the criterias given by the user.
-The endpoint should accept the four filters below as GET parameters
+The first step of the exercise is to develop a single API Endpoint that returns the concerts matching the criterias given by the user. The architecture around that endpoint is 
+left entirely up to the engineer (interface, database ...).
+The endpoint should accept the four filters below as parameters
 
 ```
-GET /concerts
+concerts
 
 bandIds: String - Comma separated list of bandIds
 latitude: float
@@ -21,20 +22,17 @@ radius: Int - In kilometers
 ```
 
 - The user must at least provide `bandIds` *OR* `latitude`/`longitude`/`radius` (But can provide all the fields too)
-- Providing incorrect values should return an HTTP Bad Request code
+- Providing incorrect values should return an error
 - The endpoint must return a JSON array of matching events sorted by descending date with the following format :
 
 ```json
-[
     {
         "band": "Radiohead",
         "location": "Point Ephémère, Paris, France",
         "date": 1569531810650,
         "latitude": 48.8814422,
         "longitude": 2.3684356
-    },
-    ...
-]
+    }
 ```
 
 ## Step 2
