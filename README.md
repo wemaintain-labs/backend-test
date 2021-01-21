@@ -15,7 +15,7 @@ The endpoint should accept the four filters below as parameters
 ```
 concerts
 
-bandIds: String - Comma separated list of bandIds
+bandIds: array of string (or comma separated list)
 latitude: float
 longitude: float
 radius: Int - In kilometers 
@@ -48,6 +48,7 @@ Please then answer the two following questions :
 # Requirements
 
 - Your repository should include a `README` file that describes the steps to run your project.
+- Your README must include a section answering the previous two questions
 - The whole stack is up to you. Feel free to use any API or third-party library.
 
 Once you are done, please share a link to your repository
